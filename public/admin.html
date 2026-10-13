@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administrador &mdash; k1ngxs system</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <div class="brand"><span class="dot"></span> k1ngxs system <span style="color:var(--muted);font-weight:400;font-size:.8rem">&middot; Admin</span></div>
+      <a class="header-link" href="/" style="margin-left:auto">Ver site</a>
+      <a class="header-link" id="logoutBtn" href="#" style="display:none">Sair</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Login -->
+    <div id="loginView" class="auth-wrap">
+      <form id="loginForm" class="panel">
+        <h2>Entrar</h2>
+        <div id="loginMsg"></div>
+        <div class="field"><label>Usu&aacute;rio</label><input id="username" autocomplete="username" required></div>
+        <div class="field"><label>Senha</label><input id="password" type="password" autocomplete="current-password" required></div>
+        <button class="btn" type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <!-- Painel -->
+    <div id="adminView" style="display:none">
+      <div class="admin-grid">
+        <section>
+          <div class="panel">
+            <h2>Nova publica&ccedil;&atilde;o</h2>
+            <div id="itemMsg"></div>
+            <form id="itemForm">
+              <div class="field"><label>T&iacute;tulo</label><input id="title" required></div>
+              <div class="field"><label>Categoria</label><select id="categoryId" required></select></div>
+              <div class="field"><label>Descri&ccedil;&atilde;o (opcional)</label><textarea id="description"></textarea></div>
+              <div class="field"><label>Demonstra&ccedil;&atilde;o (foto, v&iacute;deo ou &aacute;udio)</label><input id="preview" type="file" accept="image/*,video/*,audio/*" required></div>
+              <div class="field"><label>Arquivo para download</label><input id="file" type="file" required></div>
+              <button class="btn" type="submit">Publicar</button>
+            </form>
+          </div>
+          <div class="panel" style="margin-top:22px">
+            <h2>Categorias</h2>
+            <div id="catMsg"></div>
+            <form id="catForm">
+              <div class="field"><label>Nome da nova categoria</label><input id="catName" placeholder="Ex.: Wallpapers"></div>
+              <div class="field"><label>Imagem da categoria (opcional)</label><input id="catImage" type="file" accept="image/*"></div>
+              <button class="btn" type="submit">Criar categoria</button>
+            </form>
+            <div id="catList" class="cat-admin-list"></div>
+            <input id="catImageEdit" type="file" accept="image/*" style="display:none">
+          </div>
+          <div class="panel" style="margin-top:22px">
+            <h2>Plano de fundo do site</h2>
+            <div id="bgMsg"></div>
+            <div id="bgPreview" style="width:100%;aspect-ratio:16/7;border-radius:10px;border:1px solid var(--border);background:var(--surface-2) center/cover no-repeat;margin-bottom:12px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem">Nenhuma imagem definida</div>
+            <form id="bgForm">
+              <div class="field"><label>Escolha uma imagem de fundo</label><input id="bgImage" type="file" accept="image/*" required></div>
+              <div class="row">
+                <button class="btn" type="submit">Aplicar fundo</button>
+                <button class="btn danger" type="button" id="bgRemove" style="width:auto">Remover</button>
+              </div>
+            </form>
+          </div>
+          <div class="panel" style="margin-top:22px">
+            <h2>M&uacute;sica de fundo</h2>
+            <div id="musicMsg"></div>
+            <div id="musicCurrent" style="margin-bottom:12px;color:var(--muted);font-size:.85rem">Nenhuma m&uacute;sica definida</div>
+            <form id="musicForm">
+              <div class="field"><label>Escolha um arquivo de &aacute;udio (mp3, wav...)</label><input id="musicFile" type="file" accept="audio/*" required></div>
+              <div class="row">
+                <button class="btn" type="submit">Aplicar m&uacute;sica</button>
+                <button class="btn danger" type="button" id="musicRemove" style="width:auto">Remover</button>
+              </div>
+            </form>
+          </div>
+          <div class="panel" style="margin-top:22px">
+            <h2>Som ao clicar nas categorias</h2>
+            <div id="clickMsg"></div>
+            <div id="clickCurrent" style="margin-bottom:12px;color:var(--muted);font-size:.85rem">Nenhum som definido</div>
+            <form id="clickForm">
+              <div class="field"><label>Escolha um efeito sonoro (mp3, wav...)</label><input id="clickFile" type="file" accept="audio/*" required></div>
+              <div class="row">
+                <button class="btn" type="submit">Aplicar som</button>
+                <button class="btn danger" type="button" id="clickRemove" style="width:auto">Remover</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section>
+          <div class="panel">
+            <h2>Publica&ccedil;&otilde;es</h2>
+            <div id="itemList"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

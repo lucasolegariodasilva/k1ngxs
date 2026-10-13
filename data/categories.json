@@ -1,0 +1,64 @@
+[
+  {
+    "id": "mv6wu9ckau5jx3",
+    "name": "Sfx-Pure",
+    "slug": "sfx-pure",
+    "order": 0,
+    "image": "/uploads/mv749d8n4lf9j5-academia-industrial-kingxs-em-alto-contr.png",
+    "banner": null
+  },
+  {
+    "id": "mv6wu9ckcliv2x",
+    "name": "Wallpaper",
+    "slug": "wallpaper",
+    "order": 1
+  },
+  {
+    "id": "mv6wu9ck1ncxe3",
+    "name": "Citizen",
+    "slug": "citizen",
+    "order": 2
+  },
+  {
+    "id": "mv6wu9ck88dqpl",
+    "name": "Otimizacao",
+    "slug": "otimizacao",
+    "order": 3
+  },
+  {
+    "id": "mv6wu9ckoqii0h",
+    "name": "Tutoriais FiveM",
+    "slug": "tutoriais-fivem",
+    "order": 4
+  },
+  {
+    "id": "mv6wu9ck5c5ft6",
+    "name": "Tutoriais Edicao",
+    "slug": "tutoriais-edicao",
+    "order": 5
+  },
+  {
+    "id": "mv6wu9ckv06g0n",
+    "name": "Plugins Editor",
+    "slug": "plugins-editor",
+    "order": 6
+  },
+  {
+    "id": "mv6wu9ckdszldt",
+    "name": "OBS Lite",
+    "slug": "obs-lite",
+    "order": 7
+  },
+  {
+    "id": "mv6wu9clpkdqr9",
+    "name": "Outros",
+    "slug": "outros",
+    "order": 8
+  },
+  {
+    "id": "mv6wu9clbmamjd",
+    "name": "Banners",
+    "slug": "banners",
+    "order": 9
+  }
+]

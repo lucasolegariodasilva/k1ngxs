@@ -1,0 +1,19 @@
+{
+  "name": "download-hub",
+  "version": "1.0.0",
+  "description": "Site minimalista dark para publicar e baixar audios, fotos e arquivos. Com painel de administrador.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "init-admin": "node scripts/create-admin.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "express": "4.19.2",
+    "express-session": "1.18.0",
+    "multer": "2.0.1"
+  }
+}

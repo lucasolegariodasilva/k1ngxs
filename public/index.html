@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>k1ngxs system</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <canvas id="bg-particles"></canvas>
+  <div id="bg-photo"></div>
+  <div id="bg-dim"></div>
+
+  <!-- Menu lateral (drawer) -->
+  <div id="overlay" class="overlay"></div>
+  <aside id="drawer" class="drawer">
+    <div class="drawer-head">
+      <div class="brand"><span class="dot"></span> k1ngxs system</div>
+      <button id="drawerClose" class="icon-btn" aria-label="Fechar">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#" class="nav-item" data-action="home"><span class="ni">&#8962;</span> In&iacute;cio</a>
+      <a href="#" class="nav-item" data-action="search"><span class="ni">&#9906;</span> Buscar</a>
+      <a href="/admin" class="nav-item"><span class="ni">&#9873;</span> Administrador</a>
+      <div class="nav-section">Categorias</div>
+      <div id="drawerCats"></div>
+    </nav>
+  </aside>
+
+  <header class="site-header">
+    <div class="container bar">
+      <button id="menuBtn" class="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <div class="brand"><span class="dot"></span> k1ngxs system</div>
+      <div class="search"><input id="search" type="text" placeholder="Buscar..."></div>
+      <a class="header-link" href="/admin">Administrador</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Pagina inicial: grade de categorias -->
+    <section id="homeView">
+      <div class="hero">
+        <h1>Baixe de gra&ccedil;a. Simples assim.</h1>
+        <p>Escolha uma categoria para ver os arquivos.</p>
+      </div>
+      <h2 class="section-title">Categorias</h2>
+      <div id="catGrid" class="cat-grid"></div>
+    </section>
+
+    <!-- Dentro de uma categoria -->
+    <section id="categoryView" style="display:none">
+      <button id="backBtn" class="back-btn">&larr; Voltar</button>
+      <div id="catBanner" class="cat-banner"></div>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty" style="display:none">Nenhum arquivo nesta categoria ainda.</div>
+    </section>
+
+    <!-- Resultado de busca -->
+    <section id="searchView" style="display:none">
+      <h2 class="section-title" id="searchTitle">Resultados da busca</h2>
+      <div id="searchGrid" class="grid"></div>
+      <div id="searchEmpty" class="empty" style="display:none">Nada encontrado.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">k1ngxs system &mdash; conte&uacute;do gratuito para download.</div>
+  </footer>
+
+  <!-- Player de musica de fundo -->
+  <div id="musicPlayer" class="music-player" style="display:none">
+    <button id="musicToggle" class="music-btn" aria-label="Tocar ou pausar">&#9654;</button>
+    <span class="music-ico">&#9834;</span>
+    <input id="musicVol" class="music-vol" type="range" min="0" max="100" value="40" aria-label="Volume">
+    <audio id="bgMusic" loop preload="auto"></audio>
+  </div>
+
+  <!-- Lightbox para ver a imagem ampliada -->
+  <div id="lightbox" class="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Fechar">&times;</button>
+    <img id="lightboxImg" alt="">
+  </div>
+
+  <script src="/particles.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
